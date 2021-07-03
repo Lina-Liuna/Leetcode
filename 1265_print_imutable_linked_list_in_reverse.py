@@ -19,7 +19,6 @@ myImmutableList = sllist([1, 2, 3, 4, 5, 6])
 
 def reverseImmutableList(mylistNode):
     if mylistNode == None:
-        print(mylistNode.value)
         return
     if mylistNode!= None and mylistNode.next == None:
         print('last value of the list')
