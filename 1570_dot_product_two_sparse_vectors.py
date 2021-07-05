@@ -17,23 +17,33 @@
 class SparseVector:
     """A simple Sparse vector class"""
     nums = []
+    dict = {}
 
     def __init__(self, nums):
         self.nums = nums
 
     def SparseOptimize(self):
-        for index in range(0, len(self.nums)):
-            if self.nums[index] != 0:
-                yield self.nums[index]
+        self.dict = {}
+        for index, val in enumerate(self.nums):
+            if val != 0:
+                self.dict[index] = val
 
     def dotProduct(self, vec):
-        print(sum(x*y for x, y in zip(self.nums, vec.nums)))
+        sum = 0
+        for key in self.dict:
+            if key in vec.dict:
+                sum = sum + self.dict[key] * vec.dict[key]
+        return sum
 
+    def dotProduct_notoptimized(self, vec):
+        print(sum(x*y for x, y in zip(self.nums, vec.nums)))
+        
 v1 = SparseVector([1, 0, 0, 2, 3])
 v2 = SparseVector([0, 3, 0, 4, 0])
 v1.SparseOptimize()
 v2.SparseOptimize()
-v1.dotProduct(v2)
+print(v1.dotProduct(v2))
+
 
 
 
