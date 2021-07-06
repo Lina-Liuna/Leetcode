@@ -12,16 +12,11 @@ class MyStrClass:
     mystr = ""
 
     def removeVowels(self, strs):
-        self.mystr = strs.replace('a', '')
-        self.mystr = self.mystr.replace('e', '')
-        self.mystr = self.mystr.replace('i', '')
-        self.mystr = self.mystr.replace('o', '')
-        self.mystr = self.mystr.replace('u', '')
+        self.mystr = strs.replace('a', '').replace('e', '').replace('i', '').replace('o', '').replace('u', '')
         print(self.mystr)
 
 stringclass = MyStrClass()
 stringclass.removeVowels('today is sunday')
-
 stringclass.removeVowels('aeioud')
 
 
