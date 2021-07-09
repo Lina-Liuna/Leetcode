@@ -34,6 +34,7 @@
 #Short_url : varchar
 #)
 
+import math
 
 class Solutions:
     ID = 0
@@ -49,11 +50,34 @@ class Solutions:
         self.ORiginal_urls = longUrl
 
         while n >= 1:
+            print(n, n%62)
             self.Short_urls = self.Short_urls.replace(self.Short_urls[count], idmap[n % 62], 1)
-            n = n / 62
+            n = int(math.modf(n/62)[1])
             count = count + 1
+        id = 0
         self.Short_urls = self.Short_urls[::-1]
         print(self.Short_urls)
+        return self.Short_urls
+
+    def decode(self, shortUrl):
+        idmap = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        counter = 0
+        for letter in shortUrl[::-1]:
+            index = idmap.index(letter)
+            if counter == 0:
+                id = index
+            else:
+                id = id + index * math.pow(62, counter)
+            print(counter, letter, index, id)
+            counter = counter + 1
+        return int(id)
 
 mySolutions = Solutions()
-mySolutions.encode("http://www.google.com", 5)
+myID = 12345678
+shortUrls = mySolutions.encode("http://www.google.com", myID)
+myEnDeID = mySolutions.decode(shortUrls)
+print(myID)
+if myEnDeID == myID:
+    print("encode decode succeed!")
+else:
+    print("encode decode failure!")
