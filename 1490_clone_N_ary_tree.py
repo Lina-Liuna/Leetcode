@@ -37,7 +37,7 @@ print(test_shallowCopy(root))
 class Node:
     val = 0
     children = []
-    def __init__(self, val):
+    def __init__(self, val=None, children=None):
         self.val = val
         self.children = []
 
@@ -46,9 +46,6 @@ class Node:
         print(root.val)
         for child in root.children:
             root.preorder(child)
-
-class Solutions:
-        print("test")
 root = [1, None, 3, 2, 4, None, 5, 6]
 
 root = Node(1)
@@ -59,7 +56,21 @@ root.children[0].children.append(Node(5))
 root.children[0].children.append(Node(6))
 root.preorder(root)
 
-#firstChild.printTree(firstChild)
+class Solution:
+    def clonenode(self, root:'Node') ->'Node':
+        if not root:return None
+        newnode = Node(root.val)
+        for child in root.children:
+            childclonenode = self.clonenode(child)
+            newnode.children.append(childclonenode)
+        return newnode
+    def clonetree(self, root:'Node'):
+        return self.clonenode(root)
+
+
+mySolution = Solution()
+myclonetree = mySolution.clonetree(root)
+myclonetree.preorder(myclonetree)
 
 
 
