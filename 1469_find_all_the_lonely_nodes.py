@@ -29,42 +29,47 @@ class Node:
         if root.rightchild != None:
             self.midorder(root.rightchild)
 class Solutions:
-    nodelist = []
-    def gennodelist(self, list):
-        for index, item in enumerate(list):
-            self.nodelist.append(Node(item))
-            print(self.nodelist[index].val)
-    def binaryTree(self):
-        for index, node in enumerate(self.nodelist):
-            bitleftchildindex = bin(index) + "1"
-            leftchildindex = int(bitleftchildindex, 2)
-            if leftchildindex < len(self.nodelist):
-                print(node.val, leftchildindex, self.nodelist[leftchildindex].val)
-                node.leftchild = self.nodelist[leftchildindex]
-            if leftchildindex + 1 < len(self.nodelist):
-                print(node.val, leftchildindex + 1, self.nodelist[leftchildindex + 1].val)
-                node.rightchild = self.nodelist[leftchildindex + 1]
-        return self.nodelist[0]
+    ans = []
     def lonelychild(self, root:'Node'):
         if root == None:
             return
         if root.leftchild != None:
+            if root.rightchild == None:
+                self.ans.append(root.leftchild.val)
             self.lonelychild(root.leftchild)
-            if root.rightchild != None:
-                print("lonelychild", root.val)
+
         if root.rightchild != None:
+            if root.leftchild == None:
+                self.ans.append(root.rightchild.val)
             self.lonelychild(root.rightchild)
-            if root.leftchild != None:
-                print("lonelychild", root.val)
+
+    def traverselonelychild(self):
+        print(self.ans)
+
 
 
 
 root = [1,2,3,None, 4]
-mysolution = Solutions()
-mysolution.gennodelist(root)
-mybintree = mysolution.binaryTree()
-mybintree.midorder(mybintree)
-mysolution.lonelychild(mybintree)
+root = [11,99,88,77,None,None,66,55,None,None,44,33,None,None,22]
+roottree = Node(11)
+roottree.leftchild = Node(99)
+roottree.leftchild.leftchild = Node(77)
+roottree.leftchild.rightchild = None
+roottree.leftchild.leftchild.leftchild = Node(55)
+roottree.leftchild.leftchild.rightchild = None
+roottree.leftchild.leftchild.leftchild.leftchild = Node(33)
+roottree.leftchild.leftchild.leftchild.rightchild = None
+roottree.rightchild = Node(88)
+roottree.rightchild.rightchild = Node(66)
+roottree.rightchild.rightchild.rightchild = Node(44)
+roottree.rightchild.rightchild.leftchild = None
+roottree.rightchild.leftchild = None
+roottree.rightchild.rightchild.rightchild.rightchild = Node(22)
+roottree.rightchild.rightchild.rightchild.leftchild = None
+
+mySolution = Solutions()
+mySolution.lonelychild(roottree)
+mySolution.traverselonelychild()
 
 
 
