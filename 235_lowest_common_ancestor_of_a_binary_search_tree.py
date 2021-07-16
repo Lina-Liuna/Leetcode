@@ -27,8 +27,11 @@ class Solutions:
             return
         if root.val < p.val and root.val < q.val:
             root = self.LCAofBST(root.right, p, q)
-        if root.val > p.val and root.val > q.val:
+        elif root.val > p.val and root.val > q.val:
             root = self.LCAofBST(root.left, p, q)
+#        else:
+#            root.val is between p.val and q.val
+#            we found the lowest common ancestor that is root
         return root
 
 rootnode = Node(6)
@@ -44,8 +47,7 @@ rootnode.right.left = Node(7)
 rootnode.right.right = Node(9)
 
 p = Node(2)
-q = Node(8)
+q = Node(5)
 mysolution = Solutions()
 LCAofPandQ = mysolution.LCAofBST(rootnode, p, q)
-
 print(LCAofPandQ.val)
