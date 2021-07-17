@@ -30,10 +30,14 @@ class Solutions:
         if left is None:
             if right is not None:
                 print("return right root = ", root.val, "right is not none", right.val)
+            else:
+                print('return none')
             return right
         elif right is None:
             if left is not None:
                 print("return left root = ", root.val, "left is not none ", left.val)
+            else:
+                print('return none')
             return left
         else:
             print("level = ", level, "root.val = ", root.val,"root left and right are not none", root.val, "return root")
@@ -53,11 +57,12 @@ rootnode.left.right.right = Node(4)
 rootnode.right.left = Node(0)
 rootnode.right.right = Node(8)
 
-q = rootnode.left.right.left.left = Node(9)
+p = rootnode.left.right.left.left = Node(9)
 rootnode.left.right.left.right = Node(12)
-p = rootnode.left.right.right.left = Node(11)
+rootnode.left.right.right.left = Node(11)
 rootnode.left.right.right.right = Node(15)
-
+q = Node(20)
 mysolution = Solutions()
 LCAofPandQ = mysolution.lowestCommonAncestor(rootnode,p,q, 0)
-print(LCAofPandQ.val)
+if(LCAofPandQ != None):
+    print(LCAofPandQ.val)
