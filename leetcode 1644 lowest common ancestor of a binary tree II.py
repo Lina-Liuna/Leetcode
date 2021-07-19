@@ -31,29 +31,18 @@ class Node:
 
 
 class Solution:
-    Flag = False
-    ancestor = None
+    counter = 0
     def lowestcommonancestor(self, root:'Node', p:'Node', q:'Node',level):
         if root is None:
             return None
         print('root.val', root.val)
-        if root.val == p.val:
-            if root.ischild(root,q) != True:
-                return root
-            else:
-                self.ancestor = root
-                self.Flag = True
-        if root.val == q.val:
-            if root.ischild(root, p) != True:
-                return root
-            else:
-                self.ancestor = root
-                self.Flag = True
         #if self.pFlag == True and self.qFlag == True:
         left = self.lowestcommonancestor(root.left, p, q, level)
         right = self.lowestcommonancestor(root.right, p, q, level)
-        if self.Flag == True:
-            return self.ancestor
+        if root.val == p.val or root.val == q.val:
+            print("catch, root.val'", root.val)
+            self.counter = self.counter + 1
+            return root
         elif left is None:
             if right is not None:
                 print("return right root = ", root.val, "right is not none", right.val)
@@ -72,7 +61,7 @@ class Solution:
 
 
 rootnode = Node(3)
-rootnode.left = Node(5)
+p =rootnode.left = Node(5)
 rootnode.right = Node(1)
 
 rootnode.left.left = Node(6)
@@ -83,14 +72,14 @@ rootnode.left.right.right = Node(4)
 rootnode.right.left = Node(0)
 rootnode.right.right = Node(8)
 
-p =rootnode.left.right.left.left = Node(9)
+rootnode.left.right.left.left = Node(9)
 rootnode.left.right.left.right = Node(12)
 rootnode.left.right.right.left = Node(11)
 q = rootnode.left.right.right.right = Node(15)
 #q = Node(20)
 mysolution = Solution()
 LCAofPandQ = mysolution.lowestcommonancestor(rootnode, p, q, 0)
-if(LCAofPandQ != None):
+if(LCAofPandQ != None and mysolution.counter == 2):
     print(LCAofPandQ.val)
 else:
     print('not found the lowest common ancestor')
