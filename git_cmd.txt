@@ -1,8 +1,0 @@
-how to update local file to github:
-git add XXX.file
-git commit -m "remove printf"
-
-git status
-
-git push
-
