@@ -292,6 +292,9 @@ Output: true
 Given an m * n matrix, return all elements of the matrix in spiral order
 like greedy snake.
 
+### 24. 498. Diagonal Traverse
+Given an m * n matrix mat, return an array of all the elements of the array in a diagonal order.
+
 
 
 
