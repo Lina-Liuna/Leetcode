@@ -294,7 +294,7 @@ like greedy snake.
 ![This is my png](https://github.com/Lina-Liuna/Leetcode/raw/main/solution_diagrams/54_Spiral_Matrix.png)
 ### 24. 498. Diagonal Traverse
 Given an m * n matrix mat, return an array of all the elements of the array in a diagonal order.
-
+![Lina png](https://github.com/Lina-Liuna/Leetcode/raw/main/solution_diagrams/498.%20Diagonal%20Traverse.png)
 
 
 
