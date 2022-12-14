@@ -296,6 +296,9 @@ like greedy snake.
 Given an m * n matrix mat, return an array of all the elements of the array in a diagonal order.
 ![Lina png](https://github.com/Lina-Liuna/Leetcode/raw/main/solution_diagrams/498.%20Diagonal%20Traverse.png)
 
+### 25. 560. Subarray Sum Equals K
+Given an array of integers nums and an integer k, return the total number of sub-arrays whose sum equals to k.
+A sub-array is a contiguous non-empty sequence of elements within an array.
 
 
 
