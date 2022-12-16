@@ -307,6 +307,12 @@ A shift on s consists of moving the leftmost character of s to the rightmost pos
 
 For instance, if s = 'abcde', then it will be 'bcdea' after one shift.
 
+### 27. 105. Construct Binary Tree from preorder and inorder traversal
+Given two integer arrarys preorder and inorder where preorder is preorder traversal of a binary tree
+and inorder is the inorder traversal of the same tree, construct and return the binary tree
+
+Input: preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]
+Output: [3,9,20,null,null,15,7]
 
 
 
