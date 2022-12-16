@@ -301,6 +301,13 @@ Given an array of integers nums and an integer k, return the total number of sub
 A sub-array is a contiguous non-empty sequence of elements within an array.
 
 
+### 26. 796. Rotate String
+Given two strings s and goal, return true if and only if s can become goal after some number of shifts on s.
+A shift on s consists of moving the leftmost character of s to the rightmost position.
+
+For instance, if s = 'abcde', then it will be 'bcdea' after one shift.
+
+
 
 
 
