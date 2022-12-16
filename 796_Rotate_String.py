@@ -6,7 +6,7 @@
 class rotate_string:
     def sub_string_position(self, s1, s2):
         if len(s1) != len(s2):
-            return False
+            return len(s1)
         for i in range(len(s1)):
             if s1[i:] in s2:
                 print(s1[i:])
