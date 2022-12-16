@@ -18,6 +18,9 @@ class sorted_array:
             else:
                 i = i + 1
 
+    # why wrong_way_find_sub_arr_equals_k is not worked as expectly?
+    # we shouldn't use for loop if we want to control the cursor by our own,
+    # we must use while loop to control the cursor.
     def wrong_way_find_sub_arr_equals_k(self, arr, k):
         for i, j in zip(range(len(arr)), reversed(range(len(arr)))):
             print(i, j, arr[i], arr[j])
@@ -27,6 +30,7 @@ class sorted_array:
                 j = j - 1
             else:
                 i = i + 1
+
 
 nums = [1, 2, 3]
 k = 3
