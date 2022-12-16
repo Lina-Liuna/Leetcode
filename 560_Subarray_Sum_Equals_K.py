@@ -9,7 +9,6 @@ class sorted_array:
         i = 0
         j = len(arr) - 1
         while 0 <= i < len(arr) and 0 <= j < len(arr):
-            print(i, j, arr[i], arr[j])
             if arr[i] + arr[j] == k:
                 self.sub_arr.append((i, j))
                 i = i + 1
