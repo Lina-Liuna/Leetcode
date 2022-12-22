@@ -320,6 +320,10 @@ and inorder is the inorder traversal of the same tree, construct and return the 
 Input: preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]
 Output: [3,9,20,null,null,15,7]
 
+### 29.106. Construct Binary Tree from inorder and postorder traversal 
+Given two integer inorder and postorder when inorder is the inorder traversal of a binary tree and
+postorder is the postorder traversal of the same tree, construct and return the binary tree.
+
 
 
 
