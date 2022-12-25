@@ -56,7 +56,10 @@ Given two integer inorder and postorder when inorder is the inorder traversal of
 postorder is the postorder traversal of the same tree, construct and return the binary tree.
 ![Lina png](https://github.com/Lina-Liuna/Leetcode/raw/main/solution_diagrams/106.%20construct%20binary%20tree%20from%20inorder%20and%20postorder.png)
 
-
+### 30. 889. Construct Binary Tree from preorder and postorder traversal
+Given two integer arrays, preorder and postorder where preorder is the preorder traversal of a binary tree of distinct values
+postorder is the postorder traversal of the sam tree, reconstruct and return the binary tree
+If there exist multiple answers, you can return any of them
 
 
 
