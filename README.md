@@ -323,7 +323,7 @@ Output: [3,9,20,null,null,15,7]
 ### 29.106. Construct Binary Tree from inorder and postorder traversal 
 Given two integer inorder and postorder when inorder is the inorder traversal of a binary tree and
 postorder is the postorder traversal of the same tree, construct and return the binary tree.
-
+![Lina png](https://github.com/Lina-Liuna/Leetcode/raw/main/solution_diagrams/106.%20construct%20binary%20tree%20from%20inorder%20and%20postorder.png)
 
 
 
