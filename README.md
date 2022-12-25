@@ -311,7 +311,7 @@ For instance, if s = 'abcde', then it will be 'bcdea' after one shift.
 ### 27. 1008. Construct Binary Search Tree from Preorder Traversal
 Given an array of integer preorder, which represents the preorder traversal of a BST(binary search tree),
 construct the tree and return it's root.
-
+![Lina png](https://github.com/Lina-Liuna/Leetcode/raw/main/solution_diagrams/1008.%20Construct%20Binary%20Search%20Tree%20from%20Preorder.png)
 
 ### 28. 105. Construct Binary Tree from preorder and inorder traversal
 Given two integer arrarys preorder and inorder where preorder is preorder traversal of a binary tree
