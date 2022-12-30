@@ -64,6 +64,7 @@ If there exist multiple answers, you can return any of them
 
 ![Lina png_Awesome](https://github.com/Lina-Liuna/Leetcode/raw/main/solution_diagrams/889%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Postorder_part2.png)
 
+### See Lina's Awesome Clean and Clear solution in 889_construct_btree_preorder_postorder.py
 
 ### 31. 2196. Create Binary Tree From Descriptions
 You are given a 2D integer array descriptions where descriptions[i] = [parent, child, isleft]
