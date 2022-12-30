@@ -60,9 +60,9 @@ postorder is the postorder traversal of the same tree, construct and return the 
 Given two integer arrays, preorder and postorder where preorder is the preorder traversal of a binary tree of distinct values
 postorder is the postorder traversal of the sam tree, reconstruct and return the binary tree
 If there exist multiple answers, you can return any of them
+![Lina png_Awesome](https://github.com/Lina-Liuna/Leetcode/raw/main/solution_diagrams/889.%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Postorder.png)
 
-
-
+![Lina png_Awesome](https://github.com/Lina-Liuna/Leetcode/raw/main/solution_diagrams/889%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Postorder_part2.png)
 
 
 
