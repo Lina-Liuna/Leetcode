@@ -38,20 +38,18 @@ class BTree:
         if len(descr) != 0:
             root_index = self.find_root_index(root_data, descr)
             root = Node(root_data)
-
-            if root_index == len(descr):
+            print(root_data, root_index, len(descr), descr)
+            if root_index != len(descr):
+                root_data = descr[root_index][1]
+                if descr[root_index][2] == 1:
+                    print('left', root_data, root_index, len(descr), descr)
+                    root.left = self.construct_BTree(root_data, descr)
+                if descr[root_index][2] == 0:
+                    print('right', root_data, root_index, len(descr), descr)
+                    root.right = self.construct_BTree(root_data, descr)
+            else:
                 root.left = None
-            elif descr[root_index][2] == 1:
-                root_left_data = descr[root_index][1]
-                descr.pop(root_index)
-                root.left = self.construct_BTree(root_left_data, descr)
-            if root_index + 1 >= len(descr):
                 root.right = None
-
-            elif descr[root_index + 1] == root_data:
-                root_right_data = descr[root_index + 1][1]
-                descr.pop(root_index + 1)
-                root.right = self.construct_BTree(root_right_data, descr)
             return root
 
     def print_btree(self, root):
