@@ -64,9 +64,7 @@ If there exist multiple answers, you can return any of them
 
 ![Lina png_Awesome](https://github.com/Lina-Liuna/Leetcode/raw/main/solution_diagrams/889%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Postorder_part2.png)
 
-### See Lina's Awesome Clean and Clear solution in 889_construct_btree_preorder_postorder.py
-
-### 31. 2196. Create Binary Tree From Descriptions
+#### 31. 2196. Create Binary Tree From Descriptions
 You are given a 2D integer array descriptions where descriptions[i] = [parent, child, isleft]
 indicates that parent is the parent of child, in a binary tree of unique values.
 if isLeft == 1, then child is the left child of parent
@@ -77,9 +75,12 @@ Input: descriptions = [[20,15,1],[20,17,0],[50,20,1],[50,80,0],[80,19,1]]
 Output: [50,20,80,15,17,19]
 Explanation: The root node is the node with value 50 since it has no parent.
 The resulting binary tree is shown in the diagram.
+![Lina png](https://github.com/Lina-Liuna/Leetcode/raw/main/solution_diagrams/2196%20Create%20Binary%20Tree%20From%20Descriptions.png)
 
-
-
+#### 32. 110. Balanced Binary Tree
+Given a binary tree, determine if it is height-balanced
+For this problem, a height-balanced binary tree is defined as:
+A binary tree in which is the left and right subtree of every node differ in height by nor more than 1
 
 
 
