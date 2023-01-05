@@ -82,7 +82,21 @@ Given a binary tree, determine if it is height-balanced
 For this problem, a height-balanced binary tree is defined as:
 A binary tree in which is the left and right subtree of every node differ in height by nor more than 1
 
-#### 33. 1483. Kth Ancestor of a Tree Node
+#### 33. Maximum Depth of binary tree
+Given the root of a binary tree, return its maximum depth.
+
+A binary tree's maximum depth is the number of nodes along the longest path
+from the root node down to the farthest leaf node.
+#Input: root = [3,9,20,null,null,15,7]
+#Output: 3
+
+#### 34. 1448. Count Good Nodes in Binary Tree
+Given a binary tree root, a node X in the tree is named good if in the path from root to X are no nodes with a value
+greater than X.
+Return the number of good nodes in the binary tree.
+
+
+#### 35. 1483. Kth Ancestor of a Tree Node
 You are given a tree with n nodes from 0 to n - 1 in the form of a parent array parent where parent[i]
 is the parent of the ith node. The root of the tree is node 0. Find the kth ancestor of a given node.
 The kth ancestor of a tree node is the kth node in the path from that node to the root node.
@@ -103,10 +117,6 @@ implement the TreeAncestor class:
  ftreeAncestor.getKthAncestor(6, 3); // returns -1 because there is no such ancestor
 
 
-#### 34. 1448. Count Good Nodes in Binary Tree
-Given a binary tree root, a node X in the tree is named good if in the path from root to X are no nodes with a value
-greater than X.
-Return the number of good nodes in the binary tree.
 
 
 
