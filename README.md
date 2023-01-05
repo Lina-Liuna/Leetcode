@@ -95,8 +95,32 @@ Given a binary tree root, a node X in the tree is named good if in the path from
 greater than X.
 Return the number of good nodes in the binary tree.
 
+#### 35. 104. maximum depth of binary tree
+Given the root of a binary tree, return its maximum depth.
 
-#### 35. 1483. Kth Ancestor of a Tree Node
+A binary tree's maximum depth is the number of nodes along the longest path
+from the root node down to the farthest leaf node.
+#Input: root = [3,9,20,null,null,15,7]
+#Output: 3
+
+#### 36. 111. minimum depth of binary tree
+Given a binary tree, find its minimum depth
+The minimum depth is the number of nodes along the shortest path
+from the root node down to the nearest leaf node.
+Done!
+
+#### 37. 543. diameter of binary tree
+Given the root of a binary tree, return the length of the diameter of the tree
+The diameter of a binary tree is the length of the longest path between any two nodes in a tree.
+This path may or may not pass through the root.
+The length of a path between two nodes is represented by the number of edges between them
+
+Input: root = [1,2,3,4,5]
+Output: 3
+Explanation: 3 is the length of the path [4,2,1,3] or [5,2,1,3].
+New, No output yet
+
+#### 38. 1483. Kth Ancestor of a Tree Node
 You are given a tree with n nodes from 0 to n - 1 in the form of a parent array parent where parent[i]
 is the parent of the ith node. The root of the tree is node 0. Find the kth ancestor of a given node.
 The kth ancestor of a tree node is the kth node in the path from that node to the root node.
@@ -116,7 +140,7 @@ implement the TreeAncestor class:
  treeAncestor.getKthAncestor(5, 2); // returns 0 which is the grandparent of 5
  ftreeAncestor.getKthAncestor(6, 3); // returns -1 because there is no such ancestor
 
-
+New, No output yet
 
 
 
