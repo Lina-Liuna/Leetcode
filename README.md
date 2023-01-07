@@ -118,7 +118,22 @@ The length of a path between two nodes is represented by the number of edges bet
 Input: root = [1,2,3,4,5]
 Output: 3
 Explanation: 3 is the length of the path [4,2,1,3] or [5,2,1,3].
-New, No output yet
+all above problems are done!
+
+#### 38. 1245. tree diameter
+Given an undirected tree, return its diameter: the number of edges in a longest path in that tree
+The tree is given as an array of edges where edges[i] = [u, v] is bidirectional edge
+between nodes u and v.
+Each node has labels in the set {0, 1, ...,edges.length}
+Input: edges = [[0,1],[0,2]]
+Output: 2
+Explanation:
+A longest path of the tree is the path 1 - 0 - 2.
+
+Input: edges = [[0,1],[1,2],[2,3],[1,4],[4,5]]
+Output: 4
+Explanation: 
+A longest path of the tree is the path 3 - 2 - 1 - 4 - 5.
 
 #### 38. 1483. Kth Ancestor of a Tree Node
 You are given a tree with n nodes from 0 to n - 1 in the form of a parent array parent where parent[i]
