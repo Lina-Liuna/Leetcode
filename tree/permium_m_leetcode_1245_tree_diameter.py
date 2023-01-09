@@ -16,38 +16,35 @@ import collections
 
 
 class tree_diameter:
-    adjnodes = collections.defaultdict(list)
-    travel_mark = []
-    def get_adjnodes(self, edges):
+
+    def __init__(self):
+        self.edges = collections.defaultdict(list)
+        self.visited = set()
+        self.diameter = 0
+
+    def get_edges(self, edges):
         for [n1, n2] in edges:
-            self.adjnodes[n1].append(n2)
-            self.adjnodes[n2].append(n1)
+            self.edges[n1].append(n2)
+            self.edges[n2].append(n1)
 
     def get_diameter_between_two_nodes(self, edges, n1, n2):
-        diameter = 0
         if n1 == n2:
             return 0
+        print(n1, n2, self.edges[n1])
         if [n1, n2] in edges or [n2, n1] in edges:
-            self.travel_mark.append([n1,n2])
-
+            return self.diameter + 1
         else:
-            adjn1 = self.adjnodes[n1]
-            adjn2 = self.adjnodes[n2]
-            print(adjn2, adjn1)
-            for n1 in adjn1:
-                for n2 in adjn2:
-                    print(n1, n2)
-                    if [n1, n2] in self.travel_mark or [n2, n1] in self.travel_mark:
-                        continue
-                    diameter = self.get_diameter_between_two_nodes(edges, n1, n2) + 1
-                    self.travel_mark.append([n1,n2])
-        return diameter
+            for n in self.edges[n1]:
+                if (n, n2) not in self.visited:
+                    self.diameter = self.get_diameter_between_two_nodes(edges, n, n2) + 1
+                    self.visited.add((n, n2))
+        return self.diameter
 
 
 edges = [[0, 1], [1, 2], [2, 3], [1, 4], [4, 5]]
 td = tree_diameter()
 
-td.get_adjnodes(edges)
-print(td.adjnodes)
-#td.get_diameter_between_two_nodes(edges, 3,5)
+td.get_edges(edges)
+print(td.edges)
+td.get_diameter_between_two_nodes(edges, 0, 2)
 
