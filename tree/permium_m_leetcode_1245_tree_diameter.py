@@ -29,19 +29,22 @@ class tree_diameter:
 
     def get_diameter_between_two_nodes(self, edges, n1, n2):
         if n1 == n2:
-            return 0
+            return True
         print(n1, n2, self.visited)
         self.visited.append([n1, n2])
         self.visited.append([n2, n1])
         if [n1, n2] in edges or [n2, n1] in edges:
-            return self.diameter + 1
+            print('in edge:', n1, n2)
+            return True
         else:
             for n in self.edges[n1]:
-                print(n, self.edges[n1], n2)
+                #print(n, self.edges[n1], n2)
                 if [n, n2] not in self.visited:
-                    self.diameter = self.get_diameter_between_two_nodes(edges, n, n2) + 1
                     self.visited.append([n, n2])
                     self.visited.append([n2, n])
+                    self.diameter = self.diameter + 1
+                    if self.get_diameter_between_two_nodes(edges, n, n2) is True:
+                        return self.diameter
         return self.diameter
 
 
@@ -50,5 +53,5 @@ td = tree_diameter()
 
 td.get_edges(edges)
 print(td.edges)
-dis = td.get_diameter_between_two_nodes(edges, 0, 3)
+dis = td.get_diameter_between_two_nodes(edges, 5, 3)
 print(dis)
