@@ -19,7 +19,7 @@ class tree_diameter:
 
     def __init__(self):
         self.edges = collections.defaultdict(list)
-        self.visited = set()
+        self.visited = list()
         self.diameter = 0
 
     def get_edges(self, edges):
@@ -30,14 +30,18 @@ class tree_diameter:
     def get_diameter_between_two_nodes(self, edges, n1, n2):
         if n1 == n2:
             return 0
-        print(n1, n2, self.edges[n1])
+        print(n1, n2, self.visited)
+        self.visited.append([n1, n2])
+        self.visited.append([n2, n1])
         if [n1, n2] in edges or [n2, n1] in edges:
             return self.diameter + 1
         else:
             for n in self.edges[n1]:
-                if (n, n2) not in self.visited:
+                print(n, self.edges[n1], n2)
+                if [n, n2] not in self.visited:
                     self.diameter = self.get_diameter_between_two_nodes(edges, n, n2) + 1
-                    self.visited.add((n, n2))
+                    self.visited.append([n, n2])
+                    self.visited.append([n2, n])
         return self.diameter
 
 
@@ -46,5 +50,5 @@ td = tree_diameter()
 
 td.get_edges(edges)
 print(td.edges)
-td.get_diameter_between_two_nodes(edges, 0, 2)
-
+dis = td.get_diameter_between_two_nodes(edges, 0, 3)
+print(dis)
