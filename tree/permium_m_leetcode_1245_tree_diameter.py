@@ -20,8 +20,8 @@ class tree_diameter:
     def __init__(self):
         self.edges = collections.defaultdict(list)
         self.visited = set()
-        self.diameter = 0
         self.path = list()
+        self.diameter = collections.defaultdict(list)
 
     def get_edges(self, edges):
         for [n1, n2] in edges:
@@ -49,27 +49,49 @@ class tree_diameter:
                     if self.get_diameter_between_two_nodes(n, n2) is True:
                         return self.diameter
         return self.diameter
-"""
+    """
+
     def path_between_two_nodes(self, n1, n2):
         self.path.append(n1)
         if n1 == n2:
             print(self.path)
+            self.diameter[n1].append(len(self.path) - 1)
+            self.diameter[n2].append(len(self.path) - 1)
             return True
         self.visited.add(n1)
 
         for n in self.edges[n1]:
             if n not in self.visited:
-                self.diameter = self.diameter + 1
                 self.path_between_two_nodes(n, n2)
 
         del self.path[-1]
 
 
+    def tree_diameter(self, edges):
+        self.get_edges(edges)
+        maximum = 0
+        for n1 in self.edges:
+            for n2 in self.edges:
+                self.path = []
+                self.visited = set()
+                self.path_between_two_nodes(n1, n2)
+
+        for d in self.diameter:
+            if maximum < max(self.diameter[d]):
+                maximum = max(self.diameter[d])
+        print(maximum)
+        return maximum
+
+
+
+
 edges = [[0, 1], [1, 2], [2, 3], [1, 4], [4, 5]]
 td = tree_diameter()
 
-td.get_edges(edges)
-print(td.edges)
-dis = td.path_between_two_nodes(3, 5)
-print(dis)
+diameter_of_tree = td.tree_diameter(edges)
+print(f'the tree diameter is: {diameter_of_tree}')
+
+
+
+
 
