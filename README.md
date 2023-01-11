@@ -135,7 +135,14 @@ Output: 4
 Explanation: 
 A longest path of the tree is the path 3 - 2 - 1 - 4 - 5.
 
-#### 38. 1483. Kth Ancestor of a Tree Node
+#### 39.  102. binary tree level order traversal
+Given the root of a binary tree, return the level order traversal of its nodes' values(from left to right,
+ level by level)
+
+Input: root = [3,9,20,null,null,15,7]
+Output: [[3],[9,20],[15,7]]
+
+#### 40. 1483. Kth Ancestor of a Tree Node
 You are given a tree with n nodes from 0 to n - 1 in the form of a parent array parent where parent[i]
 is the parent of the ith node. The root of the tree is node 0. Find the kth ancestor of a given node.
 The kth ancestor of a tree node is the kth node in the path from that node to the root node.
