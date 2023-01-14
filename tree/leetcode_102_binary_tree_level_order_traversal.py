@@ -18,7 +18,8 @@ class binary_tree_level:
         self.level_order.append([root.value])
         while len(self.stack) != 0:
             children = list()
-            node = self.stack.pop()
+            node = self.stack.pop(0)
+            print(node.value)
             if node.left is not None:
                 children.append(node.left.value)
                 self.stack.append(node.left)
@@ -26,7 +27,9 @@ class binary_tree_level:
                 children.append(node.right.value)
                 self.stack.append(node.right)
             if node.left is not None or node.right is not None:
+                print(children)
                 self.level_order.append(children)
+        return self.level_order
 
 btl = binary_tree_level()
 btl.level_order_traversal(btree_root)
