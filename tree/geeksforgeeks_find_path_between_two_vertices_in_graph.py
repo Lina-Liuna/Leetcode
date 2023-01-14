@@ -22,7 +22,8 @@ class graph:
         for n in self.edges[u]:
             if n not in visited:
                 self.dfs(n, v, visited)
-        del self.paths[-1]
+        #del self.paths[-1]
+        self.paths.pop()
 
     def paths_between_two_nodes(self, u, v):
         visited = []
