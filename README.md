@@ -158,6 +158,10 @@ A leaf is a node with no children
 preorder = [4, 2, 1, 3, 7, 6, 9]
 inorder = [1, 2, 3, 4, 6, 7, 9]
 
+#### 42. geeksforgeeks detect cycle in undirected graph
+Given an undirected graph, the task is to check if there is a cycle in the given graph
+![Lina png](https://github.com/Lina-Liuna/Leetcode/raw/main/solution_diagrams/geekforgeeks_detect_cycle_undirected_graph.png)
+
 #### 42. premium level m 261 graph valid tree
 Given n nodes labeled from 0 to n-1 and a list of undirected edges(each edge is a pair of nodes)
 write a function to check whether these edges make up a valid tree.
