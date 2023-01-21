@@ -162,7 +162,6 @@ inorder = [1, 2, 3, 4, 6, 7, 9]
 Given an undirected graph, the task is to check if there is a cycle in the given graph
 ![Lina png](https://github.com/Lina-Liuna/Leetcode/raw/main/solution_diagrams/geekforgeeks_detect_cycle_undirected_graph.png)
 
-### All Above are DONE
 
 #### 43. premium level m 261 graph valid tree
 Given n nodes labeled from 0 to n-1 and a list of undirected edges(each edge is a pair of nodes)
@@ -178,9 +177,9 @@ Given a binary tree, return the values of its boundary in anti-clockwise directi
 
 Boundary includes left boundary leaves, and right boundary in order without duplicate nodes.
 
+![Lina png](https://github.com/Lina-Liuna/Leetcode/raw/main/solution_diagrams/Premium%20Level%20Medium%20545%20boundary%20of%20binary%20tree.png)
 
-
-
+### All Above are DONE
 
 
 
