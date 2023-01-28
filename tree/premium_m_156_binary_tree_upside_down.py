@@ -22,17 +22,28 @@ class UpsideDownTree:
     def upside_down_tree(self):
         res = collections.OrderedDict(reversed(self.left_boundary_nodes.items()))
         for root, [left, right] in res.items():
+            if root == (list(res.items())[-1][0]):
+                root.left = None
+                root.right = None
             if left is None:
                 self.udtree_root = root
+                new_root = root
             if left is not None:
-                print(left.value)
-                left.left = right
-                left.right = root
+                #print(new_root.value)
+                new_root.left = right
+                new_root.right = root
+                new_root = root
 
 
+    def traversal_tree(self, root):
+        if root is not None:
+            print(root.value)
+            self.traversal_tree(root.left)
+            self.traversal_tree(root.right)
 
 
 udtree = UpsideDownTree()
 udtree.get_left_boundary_nodes(btree_root)
 print(udtree.left_boundary_nodes.keys())
 udtree.upside_down_tree()
+udtree.traversal_tree(udtree.udtree_root)
